@@ -5,7 +5,7 @@ pipeline {
         DOCKER_TAG="latest"
     }
     stages {
-<<<<<<< HEAD
+
         // stage('Build') { 
         //     steps {
         //         sh 'mvn -B -DskipTests clean package'
@@ -24,12 +24,8 @@ pipeline {
         stage('Deploy container'){
             steps{
                 sh 'podman -d -p 8081:8081 --name webcontainer maven_app'
-=======
-        stage('Build') { 
-            steps {
-              sh "mvn -B -DskipTests clean package"
->>>>>>> e1860b40b2f49b15c78ba06d03b39e6afe585d18
             }
         }
     }
+
 }
