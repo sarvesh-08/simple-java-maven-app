@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        DOCKER_IMAGE="{sarvesh5011}/my_web_app"
+        DOCKER_IMAGE="sarvesh5011/myapp"
         DOCKER_TAG="latest"
     }
     stages {
