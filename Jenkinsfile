@@ -18,12 +18,12 @@ pipeline {
         }
         stage('Build'){
             steps{
-                sh 'podman build -t maven_app .'
+                sh 'docker build -t myapp .'
             }
         }
         stage('Deploy container'){
             steps{
-                sh 'podman -d -p 8081:8081 --name webcontainer maven_app'
+                sh 'docker -d -p 8081:8081 --name webcontainer myapp'
             }
         }
     }
